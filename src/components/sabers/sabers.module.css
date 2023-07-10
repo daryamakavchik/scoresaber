@@ -1,0 +1,128 @@
+.saberslink {
+  display: flex;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.saber {
+  position: relative;
+  left: 145px;
+  margin-top: 0px;
+  width: 6px;
+  height: 180px;
+  background-color: white;
+  border-radius: 6px/10px;
+  box-shadow: 0px 0px 10px, 0px 0px 2px inset;
+  animation: glow 1.5s linear infinite;
+}
+
+.saber:before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 175px;
+  width: 8px;
+  height: 12px;
+  background-image: linear-gradient(
+      to right,
+      transparent 1px,
+      rgba(255, 255, 255, 0.4) 1px,
+      rgba(255, 255, 255, 0.8) 3px,
+      rgba(255, 255, 255, 0.3) 4px,
+      rgba(0, 0, 0, 0.2) 7px,
+      transparent 7px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(167, 17, 35, 255) 3px,
+      black 3px,
+      black 4px,
+      transparent 4px,
+      transparent 8px,
+      black 8px,
+      black 9px,
+      rgba(167, 17, 35, 255) 9px,
+      rgba(167, 17, 35, 255) 11px,
+      black 11px,
+      black 12px
+    ),
+    linear-gradient(to left, transparent 1px, rgba(167, 17, 35, 255) 1px, rgba(167, 17, 35, 255) 7px, transparent 7px);
+  box-shadow: 1px 25px 0px 0px #555, 2px 25px 0px 1px #222;
+}
+
+.saber:after {
+  position: absolute;
+  top: 187px;
+  left: -1px;
+  width: 8px;
+  height: 60px;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0px,
+      rgba(255, 255, 255, 0.7) 2px,
+      rgba(255, 255, 255, 0.2) 3px,
+      rgba(0, 0, 0, 0.5) 8px
+    ),
+    linear-gradient(
+      to bottom,
+      grey 5px,
+      black 5px,
+      grey 6px,
+      grey 7px,
+      black 7px,
+      grey 8px,
+      grey 9px,
+      black 9px,
+      grey 10px,
+      grey 11px,
+      black 11px,
+      grey 12px,
+      grey 16px,
+      black 16px,
+      black 17px,
+      rgba(167, 17, 35, 255) 17px,
+      rgba(167, 17, 35, 255) 20px,
+      black 20px,
+      black 21px,
+      transparent 21px,
+      transparent 57px,
+      black 57px,
+      rgba(167, 17, 35, 255) 58px
+    ),
+    linear-gradient(
+      to right,
+      rgba(167, 17, 35, 255) 1px,
+      black 1px,
+      black 2px,
+      transparent 3px,
+      transparent 3px,
+      rgba(167, 17, 35, 255) 3px,
+      silver 5px,
+      black 5px,
+      grey 6px,
+      transparent 6px,
+      transparent 7px,
+      rgba(167, 17, 35, 255) 7px,
+      silver 8px
+    ),
+    linear-gradient(to bottom, grey 0px, grey 60px);
+  content: "";
+}
+
+@keyframes glow {
+  from {
+    color: rgba(167, 17, 35, 255);
+    box-shadow: 0 5px 19px rgba(167, 17, 35, 255);
+    box-shadow: 0 5px 19px rgba(167, 17, 35, 255);
+  }
+  50% {
+    color: rgba(167, 17, 35, 255);
+    box-shadow: 0 5px 18px rgba(167, 17, 35, 255);
+    box-shadow: 0 5px 18px rgba(167, 17, 35, 255);
+  }
+  to {
+    color: rgba(167, 17, 35, 255);
+    box-shadow: 0 5px 9px rgba(167, 17, 35, 255);
+    box-shadow: 0 5px 9px rgba(167, 17, 35, 255);
+  }
+}

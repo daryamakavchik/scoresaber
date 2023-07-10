@@ -1,0 +1,1 @@
+export const tabs = [ 'EASY', 'NORMAL', 'HARD', 'EXPERT'];

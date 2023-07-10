@@ -1,0 +1,191 @@
+.songcontainer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 0 5px 10px 0;
+    padding: 0;
+    position: relative;
+    width: 720px;
+    height: 60px;
+    box-shadow: rgba(197, 219, 227, 0.4) 0px 1px 0px, rgba(197, 219, 227, 0.4) 0px 0px 6.6px;
+}
+
+.songcontainer:last-child {
+    margin: 0 auto 0 auto;
+}
+
+.svg {
+    margin: 0 auto 30px auto;
+}
+
+.shape {
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linejoin: round;
+    stroke: #fff;
+    stroke-dasharray: 1860px;
+    stroke-dashoffset: 1860px;
+    stroke-linecap: round;
+    /* transition: all 0.3s ease; */
+    filter: drop-shadow(0 0 2px rgba(130, 170, 183, 0.8)) drop-shadow(0 0 4px rgba(130, 170, 183, 0.8))
+        drop-shadow(0 0 8px rgba(130, 170, 183, 0.8)) drop-shadow(0 0 12px rgba(130, 170, 183, 0.8));
+}
+
+.shape:focus{
+  stroke-dasharray: 1860px;
+  stroke-dashoffset: 0;
+}
+
+.hovertext {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.songcontainer .hovertext {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    color: #fff;
+    font-size: 24px;
+    line-height: 60px;
+    padding-left: 10px;
+    font-style: italic;
+    font-family: acumin-pro-extra-condensed, sans-serif;
+    cursor: pointer;
+}
+
+.songcontainer:hover .shape {
+    stroke-dasharray: 1860px;
+    stroke-dashoffset: 0;
+}
+
+.activeshape{
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linejoin: round;
+  stroke: #fff;
+  stroke-dasharray: 1860px;
+  stroke-dashoffset: 1860px;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 2px rgba(130, 170, 183, 0.8)) drop-shadow(0 0 4px rgba(130, 170, 183, 0.8))
+  drop-shadow(0 0 8px rgba(130, 170, 183, 0.8)) drop-shadow(0 0 12px rgba(130, 170, 183, 0.8));
+  stroke-dasharray: 1860px;
+  stroke-dashoffset: 0;
+}
+
+.songdiv{
+  display: flex;
+  flex-direction: row;
+  max-height: 55px;
+}
+
+.menubutton{
+  display: flex;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background-color: rgba(104, 117, 144, 0.3);
+  padding: 0;
+  border: 0;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-right: 9px;
+  margin-left: 0;
+  transform: rotate(90deg);
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+  }
+  
+  button {
+    position: relative;
+    border: none;
+    font-size: 18px;
+    transition: color 0.5s, transform 0.2s, background-color 0.2s;
+    outline: none;
+    margin: 0 10px;
+    padding: 13px 23px;
+    border: 3px solid transparent;
+  }
+  
+  button:active {
+    transform: translateY(3px);
+  }
+  
+  .buttoncontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .materialbubble {
+    margin: 15px 5px 0 0;
+    padding: 0;
+    width: 45px;
+    height: 30px;
+    /* background-color: transparent; */
+    background-color: rgba(63, 75, 102, 0.3);
+  }
+  
+  .materialicon {
+    margin: 8px 0 0 0;
+    padding: 0;
+    width: 50%;
+    height: 36%;
+    opacity: 0.7;
+  }
+
+  button:hover{
+    cursor: pointer;
+  }
+  
+  button:hover .materialicon {
+    opacity: 1;
+  }
+
+  .start{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .star {
+    width: 20px;
+    height: 10px;
+    margin-left: 2px;
+    margin-right: 5px;
+    transform: rotate(90deg);
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 875px) {
+  .songcontainer{
+    width: 100%;
+  }
+
+  .songcontainer .hovertext{
+    width: 90%;
+    font-size: 18px;
+    padding-left: 20px;
+  }
+
+  .songdiv{
+    display: inline-block;
+    overflow: hidden;
+    max-width: 417px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+}

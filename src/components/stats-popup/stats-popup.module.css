@@ -1,0 +1,114 @@
+.popupright {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(78, 87, 105, 0.3);
+  height: 0px;
+  width: 504px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.popuprightactive {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(78, 87, 105, 0.3);
+  width: 504px;
+  height: 623px;
+  transition: height 0.3s ease;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.popupheader {
+  display: flex;
+  flex-direction: row;
+  width: 99.7%;
+  height: 43px;
+}
+
+.popupsubheader {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 20px;
+  justify-content: end;
+}
+
+.popupsubheadertext {
+  display: flex;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: acumin-pro-extra-condensed, sans-serif;
+  font-size: 12px;
+  width: 53px;
+  margin-top: 11px;
+  margin-left: 10px;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.popupsubheadertext:nth-child(4) {
+  margin-left: 15px;
+}
+
+.popupsubheadertext:last-child {
+  min-width: 58px;
+  margin-right: 10px;
+}
+
+.headerstat {
+  display: flex;
+  width: calc(100% / 4);
+  min-height: 44px;
+  margin-top: 2px;
+  margin-left: 2px;
+  background-color: rgba(183, 190, 204, 0.1);
+  background-color: rgba(183, 190, 204, 0.1);
+  border-right: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: acumin-pro-extra-condensed, sans-serif;
+}
+
+.headerstat:hover {
+  cursor: pointer;
+  box-shadow: rgba(238, 236, 236, 0.4) 0px 1px 4px 0px,
+    rgba(235, 238, 241, 0.15) 0px 0px 2px 1px,
+    rgba(242, 243, 244, 0.15) 0px -0.5px 2px 0px;
+}
+
+.activeheaderstat {
+  display: flex;
+  width: calc(100% / 4);
+  min-height: 44px;
+  margin-top: 2px;
+  margin-left: 2px;
+  background-color: rgba(183, 190, 204, 0.1);
+  background-color: rgba(183, 190, 204, 0.1);
+  border-right: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: acumin-pro-extra-condensed, sans-serif;
+  box-shadow: rgba(238, 236, 236, 0.4) 0px 1px 4px 0px,
+  rgba(235, 238, 241, 0.15) 0px 0px 2px 1px,
+  rgba(242, 243, 244, 0.15) 0px -0.5px 2px 0px;
+}
+
+.players {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  margin-top: 4px;
+  max-height: 560px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 1948px){
+  .popuprightactive{
+    width: 731px;
+  }
+}

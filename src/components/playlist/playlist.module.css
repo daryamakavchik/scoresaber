@@ -1,0 +1,311 @@
+.playlistsection {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  width: 100vw;
+  animation: fadeIn 2s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.playlistsect {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  height: fit-content;
+  border-radius: 40px;
+  padding: 20px 25px 0 25px;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1800px;
+}
+
+.beatsaber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 13px auto;
+}
+
+.headerbeatsaber {
+  width: 725px;
+  margin-top: 50px;
+}
+
+.neonred {
+  --neon: hsl(355 100% 95%);
+  --neon-glow: hsl(355 98% 40%);
+  font-family: "neon-tubes-2-regular", sans-serif;
+}
+
+.neonblue {
+  --neon: hsl(192 100% 95%);
+  --neon-glow: hsl(194 100% 40%);
+  font-family: "neon-tubes-2-regular", sans-serif;
+  margin: 0;
+}
+
+.neonbluebutton {
+  --neon: hsl(192 100% 95%);
+  --neon-glow: hsl(194 100% 40%);
+  font-family: "neon-tubes-2-regular", sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+h3 > i {
+  color: var(--neon);
+  text-shadow: 0 0 20px var(--neon-glow), 0 0 2.5vmin var(--neon-glow),
+    0 0 5vmin var(--neon-glow), 0 0 10vmin var(--neon-glow),
+    0 0 15vmin var(--neon-glow);
+}
+
+@media (dynamic-range: high) {
+  .neonred {
+    --neon-glow: color(display-p3 1 0 0);
+  }
+
+  .neonblue {
+    --neon-glow: color(display-p3 0 0.75 1);
+  }
+
+  h3 > i {
+    text-shadow: 0 0 2.5vmin var(--neon-glow), 0 0 10vmin var(--neon-glow),
+      0 0 15vmin var(--neon-glow);
+  }
+}
+
+h3 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: normal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.playlist {
+  display: flex;
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 10px;
+  padding: 2px 2px;
+  max-height: 624px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+button {
+  position: relative;
+  border: none;
+  font-size: 18px;
+  transition: color 0.5s, transform 0.2s, background-color 0.2s;
+  outline: none;
+  margin: 0 10px;
+  padding: 23px 33px;
+  border: 3px solid transparent;
+  box-shadow: none;
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
+.materialbubble:hover {
+  background-color: rgba(12, 14, 18);
+  box-shadow: rgba(130, 170, 183, 0.8) 0.6px 4px 12px;
+}
+
+.materialbubble:hover .neonbluebutton {
+  opacity: 1.5;
+  filter: saturate(1);
+  filter: brightness(1);
+}
+.materialbubble {
+  margin: 23px 0 0 0;
+  padding: 12px 0 0 0;
+  width: 195px;
+  height: 70px;
+  background-color: rgba(9, 10, 15, 0.4);
+  box-shadow: rgba(130, 170, 183, 0.8) 0px 2px 6px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+.materialicon {
+  margin: 10px 0 0 0;
+  padding: 0;
+  width: 50%;
+  height: 36%;
+  opacity: 0.7;
+}
+
+.menubutton {
+  display: flex;
+  margin-top: 15px;
+  margin-right: 10px;
+  width: 100px;
+  height: 70px;
+  border-radius: 50px;
+  background-color: rgba(104, 117, 144, 0.3);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: acumin-pro-extra-condensed, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.menubutton:last-child {
+  margin-right: 0;
+}
+
+.menubutton:hover {
+  cursor: pointer;
+  box-shadow: rgba(238, 236, 236, 0.4) 0px 1px 4px 0px,
+    rgba(235, 238, 241, 0.15) 0px 0px 2px 1px,
+    rgba(242, 243, 244, 0.15) 0px -0.5px 2px 0px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.buttonn{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 250px;
+  height: 60px;
+  top: 7px;
+  right: 33px;
+  margin: 20px auto 0 auto;
+  justify-content: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  transform: translateY(-50px);
+}
+
+.svg {
+  margin: 0 auto;
+}
+
+.shape {
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linejoin: round;
+  stroke: #fff;
+  stroke-dasharray: 1860px;
+  stroke-dashoffset: 1860px;
+  stroke-linecap: round;
+  /* transition: all 0.3s ease; */
+  filter: drop-shadow(0 0 2px rgba(130, 170, 183, 0.8)) drop-shadow(0 0 4px rgba(130, 170, 183, 0.8))
+      drop-shadow(0 0 8px rgba(130, 170, 183, 0.8)) drop-shadow(0 0 12px rgba(130, 170, 183, 0.8));
+}
+
+.shape:focus{
+  stroke-dasharray: 1860px;
+  stroke-dashoffset: 0;
+}
+
+
+.hovertext {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.buttonn .hovertext {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  color: #fff;
+  font-size: 24px;
+  line-height: 60px;
+  padding-left: 1px;
+  font-style: italic;
+  font-family: acumin-pro-extra-condensed, sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+.buttonn:hover .shape {
+  stroke-dasharray: 1860px;
+  stroke-dashoffset: 0;
+}
+
+.activeshape{
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linejoin: round;
+  stroke: #fff;
+  stroke-dasharray: 1860px;
+  stroke-dashoffset: 1860px;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 2px rgba(130, 170, 183, 0.8)) drop-shadow(0 0 4px rgba(130, 170, 183, 0.8))
+  drop-shadow(0 0 8px rgba(130, 170, 183, 0.8)) drop-shadow(0 0 12px rgba(130, 170, 183, 0.8));
+  stroke-dasharray: 1860px;
+  stroke-dashoffset: 0;
+}
+
+.songdiv{
+  display: flex;
+  flex-direction: row;
+  max-height: 55px;
+  justify-content: center;
+  width: 250px;
+}
+
+
+button {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+button {
+  position: relative;
+  border: none;
+  font-size: 18px;
+  transition: color 0.5s, transform 0.2s, background-color 0.2s;
+  outline: none;
+  margin: 0 10px;
+  padding: 13px 23px;
+  border: 3px solid transparent;
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
+@media screen and (max-width: 1948px) {
+.playlist{
+  margin: 0 auto;
+}
+
+.playlistsect{
+  max-height: 654px;
+  min-height: 654px;
+  box-sizing: border-box;
+}
+}
