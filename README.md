@@ -3,7 +3,7 @@
 ## Description
 "Score Saber" is a pet project which I am working on for extra practice. It is a frontend part of an interactive application, where a user enters his ScoreSaber ID (76561198333869741 can be used to test) and receives a custom song recommendation playlist. By pressing on the left arrow, he receives statistics for a selected song. By pressing on the right arrow, he can also compare a selected song's statistics with his friends. At the top of the page there are personal statistics, such as global rank, country rank, total play count etc. By pressing on the 'Home' button, a user returns to login (ID) page. 
 
-API is now under development. Design and implementation ideas are created by me.
+API is now under development. Design and implementation ideas are done by me.
 
 <img width="1369" alt="page1" src="https://github.com/daryamakavchik/scoresaber/assets/90967822/dea4b683-da52-4ccd-880e-1efc66dcee3e">
 <img width="1369" alt="page2" src="https://github.com/daryamakavchik/scoresaber/assets/90967822/af739994-61cb-405e-8c8a-3566362500bf">
