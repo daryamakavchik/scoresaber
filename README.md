@@ -41,6 +41,8 @@ npm run start
 
 ## To Do
 - [ ] workable avatar button
-- [ ] fix hover effect on main page stats
+- [ ] fix submit button size
+- [ ] songs onclick function
+- [ ] fix hover on main page stats
 - [ ] connect API
 - [ ] work more on design
