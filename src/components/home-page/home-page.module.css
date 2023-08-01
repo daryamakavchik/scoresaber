@@ -4,7 +4,7 @@
     position: relative;
     align-items: center;
     justify-content: center;
-    margin-top: 250px;
+    margin-top: 230px;
   }
   
   .apptitle {
@@ -27,7 +27,7 @@
     opacity: 0.7;
   }
 
-  @media screen and (max-width: 550px){
+  @media screen and (max-width: 580px){
     .apptitle{
       font-size: 28px;
     }

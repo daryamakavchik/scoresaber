@@ -36,3 +36,9 @@
     justify-content: start;
     min-width: 412px;
   }
+
+  @media screen and (min-width: 320px) and (max-width: 580px){
+    .stat{
+        min-width: 212px;
+    }
+  }

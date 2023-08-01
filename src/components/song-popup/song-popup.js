@@ -1,9 +1,17 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 import { ProgressBar } from "../progress-bar/progress-bar";
 import award from '../../images/award.png';
 import styles from "./song-popup.module.css";
 
 export const SongPopup = ({ cover, currentSong }) => {
+
+  const isTablet = useMediaQuery({
+    query: 'only screen and (min-width: 580px) and (max-width: 875px)'
+  });
+  const isMobile = useMediaQuery({
+    query: 'only screen and (max-width: 580px)'
+  })
 
   React.useEffect(() => {
     const counters = document.getElementById('popup') && document.getElementById('popup').querySelectorAll(".count");
@@ -44,7 +52,7 @@ export const SongPopup = ({ cover, currentSong }) => {
       <div
         className={styles.popupimgactive}
       >
-        <img src={cover} style={{ width: "180px", height: "180px" }} />
+        <img src={cover} style={{ width: isTablet ? "140px" : "180px", height: isTablet ? "140px": "180px" }} />
       </div>
       <div className={styles.popupstats}>
       <div className={styles.menubutton}>

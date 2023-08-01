@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 import { useDispatch, useSelector } from "react-redux";
 import { setActiveSong } from "../../components/services/actions";
 import { songs } from "../utils/songs";
@@ -23,6 +24,14 @@ export const Playlist = () => {
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 1948px)").matches
   );
+  const isTablet = useMediaQuery({
+    query: 'only screen and (min-width: 580px) and (max-width: 875px)'
+  })
+  const isMobile = useMediaQuery({
+    query: 'only screen and (max-width: 580px)'
+  })
+
+  console.log(`state ${isStateChanged}, playlist ${activePlaylist}, song ${activeSongPopup}, stats ${activeStatsPopup} `);
 
   const [matchesSmall, setMatchesSmall] = useState(window.matchMedia("(max-width: 875px)").matches);
 
@@ -89,6 +98,8 @@ export const Playlist = () => {
         buttonleft.style.visibility = "visible";
         buttonright.style.display = "flex";
         buttonright.style.visibility = "visible";
+        buttonright.style.position = "relative";
+        buttonright.style.marginLeft = isTablet ? "32px" : isMobile ? "0" : "40px";
       }
     }
     if (matches && isStateChanged && buttonleft && buttonright) {
@@ -122,10 +133,10 @@ export const Playlist = () => {
           <i className={styles.neonblue}>Playlist</i>
         </h3>
         <div className={styles.playlistsect}>
-          {(activeSongPopup === true || matches === true) && (
-            <SongPopup cover={cover} currentSong={currentSong} />
-          )}
-          {activePlaylist === true && (
+            <ArrowButton id="buttonleft" onClick={() => onLeftArrowClick()} direction="left" />
+            {activePlaylist === true && (
+            <>
+            <div className={styles.playlistcontainer}>
             <div className={styles.playlist} id="playlist">
               {songs.map((s, index) => (
                 <Song
@@ -133,14 +144,10 @@ export const Playlist = () => {
                   song={s}
                   index={index}
                   key={index}
-                  onClick={(e) => onSongClick(e)}
-                />
+                  onClick={(e) => onSongClick(e)} />
               ))}
             </div>
-          )}
-          {(activeStatsPopup === true || matches === true) && <StatsPopup />}
-        </div>
-        <Button>
+                                          <Button>
         <div className={styles.buttonn}>
         <svg
           height="60px"
@@ -169,37 +176,20 @@ export const Playlist = () => {
           <Ripple color={"white"} duration={2000} />
           </div>
         </Button>
-        {/* <div className={styles.buttoncontainer} style={{ height: "60px" }}>
-        <svg
-          height="60px"
-          width="270px"
-          className={styles.svg}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            className={styles.shape}
-            id="shape"
-            d="M 250,0 H 0 V 60 H 250 V 0 Z"
-          />
-        </svg>
-        <div className={styles.hovertext} id="hover">
-          <div className={styles.songdiv}>
-            <h3 className={`${styles.beatsaber} ${styles.beatsaber}`}>
-              <i
-                className={styles.neonblue}
-                style={{ fontSize: "22px", marginTop: "17px" }}
-              >
-                DOWNLOAD
-              </i>
-            </h3>
-          </div>
         </div>
-      </div> */}
+            </>
+            )}          
+            {(activeSongPopup === true || matches === true) && (
+              <SongPopup cover={cover} currentSong={currentSong} />
+            )}
+            {(activeStatsPopup === true || matches === true) && <StatsPopup />}
+            <ArrowButton id="buttonright" onClick={() => onRightArrowClick()} direction="right" />
+        </div>
       </div>
-      <div id="buttons" className={styles.buttons}>
+      {/* <div id="buttons" className={styles.buttons}>
         <ArrowButton onClick={(e) => onLeftArrowClick(e)} direction="left" />
         <ArrowButton onClick={(e) => onRightArrowClick(e)} direction="right" />
-      </div>
+      </div> */}
     </>
   );
 };

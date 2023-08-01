@@ -321,10 +321,11 @@ h3 {
   font-style: italic;
   font-family: acumin-pro-extra-condensed, sans-serif;
   cursor: pointer;
+  padding: 0;
 }
 
 .songcontainer:hover .shape {
-  stroke-dasharray: 1560px;
+  stroke-dasharray: 1960px;
   stroke-dashoffset: 0;
 }
 
@@ -509,14 +510,18 @@ button:active {
     width: 100px;
   }
 
+  .countercontainer{
+    width: 70%
+  }
+
   .counter .counteroverlay {
-    width: 90px;
+    width: 110px;
     left: -22px;
   }
 
-  .counter:nth-child(7) .counterdetails {
+  /* .counter:nth-child(7) .counterdetails {
     left: 57%;
-  }
+  } */
 
   .counter h3 {
     top: 38%;
@@ -529,12 +534,75 @@ button:active {
 
 }
 
-@media screen and (min-width: 320px) and (max-width: 875px) {
+@media screen and (min-width: 580px) and (max-width: 875px) {
   .info {
     height: 72px;
   }
   .countercontainer {
-    width: 86%;
+    opacity: 0;
+    width: 80%;
+    justify-content: space-between;
+    margin: 0;
+    display: none;
+  }
+
+  .counter {
+    margin-left: 15px;
+  }
+
+  .counterdetails {
+    width: 40px;
+  }
+
+  .counter .counteroverlay {
+    width: 80px;
+    left: -5px;
+  }
+
+  .counter h3 {
+    top: 38%;
+    font-size: 9px;
+  }
+
+  .icon {
+    width: 12px;
+    height: 12px;
+    margin-top: 23px;
+  }
+
+  .userinfo{
+   right: 16px;
+   margin-left: 8px;
+  }
+
+  .avatar{
+    width: 28px;
+    height: 28px;
+    margin-top: 8px;
+  }
+
+  .menubutton {
+    width: 28px;
+    height: 28px;
+    background-color: rgba(104, 117, 144, 0.3);
+    margin-top: 25px;
+    margin-left: 16px;
+  }
+
+  .menu {
+    top: 6px;
+    left: 6px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 580px) {
+  .info {
+    height: 72px;
+  }
+  .countercontainer {
+    display: none;
     justify-content: space-between;
     margin: 0;
   }
@@ -548,36 +616,8 @@ button:active {
   }
 
   .counter .counteroverlay {
-    width: 60px;
+    width: 80px;
     left: -5px;
-  }
-
-  .counter:nth-child(1){
-    margin-left: 1px;
-  }
-
-  .counter:nth-child(1) h3{
-    left: 70%;
-  }
-
-  .counter:nth-child(2) h3{
-    left: 70%;
-  }
-
-  .counter:nth-child(2) .counteroverlay {
-    left: -43%;
-  }
-
-  .counter:nth-child(7) .counterdetails {
-    left: 56%;
-  }
-
-  .counter:nth-child(8) .counterdetails {
-    left: 46%;
-  }
-
-  .counter:nth-child(9) .counterdetails {
-    left: 46%;
   }
 
   .counter h3 {

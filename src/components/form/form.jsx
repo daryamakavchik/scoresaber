@@ -23,12 +23,12 @@ export function Form({ id, submitFunc, inputChangeFunc, text }) {
             <div className={styles.popover}>Some text about scoresaber id</div>
           </div>
         </div>
-        <div className={styles.buttond}>
+        <div className={styles['button-container']}>
           <button
             type="submit"
             id="submitbutton"
             onClick={submitFunc}
-            className={styles.btnslice}
+            className={styles['button-slice']}
             style={{ backgroundColor: "transparent" }}
             disabled
           >

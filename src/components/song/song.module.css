@@ -18,6 +18,62 @@
     margin: 0 auto 30px auto;
 }
 
+@media screen and (min-width: 580px) and (max-width: 875px){
+  .svg{
+    height: 45px;
+    width: 450px;
+  }
+
+  .songcontainer{
+    height: 45px !important;
+    width: 450px;
+  }
+
+  .songcontainer .hovertext{
+    height: 45px !important;
+    width: 450px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .songdiv{
+    height: 45px !important;
+    width: 450px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 11px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 580px){
+  .svg{
+    height: 35px;
+    width: 300px !important;
+  }
+
+  .songcontainer{
+    height: 35px !important;
+    width: 300px !important;
+  }
+
+  .songcontainer .hovertext{
+    height: 35px !important;
+    width: 300px !important;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .songdiv{
+    height: 35px !important;
+    width: 300px !important;
+    font-size: 12px;
+    line-height: 14px;
+    padding-top: 11px;
+  }
+}
+
+
+
 .shape {
     fill: none;
     stroke-width: 1.8;
@@ -79,7 +135,6 @@
 .songdiv{
   display: flex;
   flex-direction: row;
-  max-height: 55px;
 }
 
 .menubutton{
@@ -169,7 +224,7 @@ button {
   margin-top: 5px;
 }
 
-@media screen and (min-width: 320px) and (max-width: 875px) {
+/* @media screen and (min-width: 320px) and (max-width: 875px) {
   .songcontainer{
     width: 100%;
   }
@@ -188,4 +243,4 @@ button {
     white-space: nowrap;
   }
 
-}
+} */

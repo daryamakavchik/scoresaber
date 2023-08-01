@@ -6,9 +6,8 @@ export const ButtonStyled = styled.button`
   outline: none;
   position: relative;
   cursor: pointer;
-  top: 20px;
-  left: calc((100vw - 731px) / 2 + 220px);
   color: #fff;
+  top: 15px;
   font-size: 20px;
   border: none;
   box-shadow: rgba(130, 170, 183, 0.6) 0px 2px 6px;

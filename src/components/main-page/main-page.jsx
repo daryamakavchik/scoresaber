@@ -245,8 +245,8 @@ export function MainPage() {
             </Link> 
           </div>
           <Playlist />
-          <div className={styles.page}>
-            <div className={styles.content}>
+          {/* <div className={styles.page}>
+            <div className={styles.content}> */}
               {/* <h2 className={styles.maintitle}>compare</h2>
             <Form
               id="opponentid"
@@ -263,7 +263,7 @@ export function MainPage() {
               {/* <Sabers isLeft isRight /> */}
             </div>
 
-            <div className={styles.content}>
+            {/* <div className={styles.content}> */}
               {/* <h2 className={styles.maintitle}>get stats</h2> */}
               {/* <Form
               id="opponentid"
@@ -278,9 +278,9 @@ export function MainPage() {
               </p>
             )} */}
               {/* <Sabers isLeft isRight /> */}
-            </div>
-          </div>
-        </div>
+            {/* </div>
+          </div> */}
+        {/* </div> */}
       </>
     )
   );

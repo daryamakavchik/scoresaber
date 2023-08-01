@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HomePage } from "../home/home-page";
+import { HomePage } from "../home-page/home-page";
 import { MainPage } from "../main-page/main-page";
 
 function App() {
@@ -17,5 +17,4 @@ function App() {
 export default App;
 
 
-// 76561198187936410
-// 76561198333869741
+// sample ids: 76561198187936410, 76561198333869741
